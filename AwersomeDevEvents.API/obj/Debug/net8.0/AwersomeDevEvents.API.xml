@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AwersomeDevEvents.API</name>
+    </assembly>
+    <members>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.GetAll">
+            <summary>
+            Obter todos os eventos
+            </summary>
+            <returns>Coleção de eventos</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.GetById(System.Guid)">
+            <summary>
+            Obter um evento
+            </summary>
+            <param name="id">Identificador do evento</param>
+            <returns>Dado do evento</returns>
+            <response code="200">Sucesso</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.Post(AwersomeDevEvents.API.Models.DevEventInputModel)">
+            <summary>
+            Cadastrar um evento
+            </summary>
+            <remarks>
+            {"title": "string","description": "string","startDate": "2024-03-19T19:13:02.997Z","endDate": "2024-03-19T19:13:02.997Z"}
+            </remarks>
+            <param name="input">Dados do evento</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="201">Sucesso</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.Update(System.Guid,AwersomeDevEvents.API.Models.DevEventInputModel)">
+            <summary>
+            Atualizar um evento
+            </summary>
+            <remarks>
+            {"title": "string","description": "string","startDate": "2024-03-19T19:13:02.997Z","endDate": "2024-03-19T19:13:02.997Z"}
+            </remarks>
+            <param name="id">Identificador de evento</param>
+            <param name="input">Dados do evento</param>
+            <returns>Nada</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.Delete(System.Guid)">
+            <summary>
+            Deletar um evento
+            </summary>
+            <param name="id">Identificador de evento</param>
+            <returns>Nada</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.PostSpeaker(System.Guid,AwersomeDevEvents.API.Models.DevEventSpeakerInputModel)">
+            <summary>
+            Cadastrar palestrante
+            </summary>
+            <remarks>
+            {"name": "string", "talkTitle": "string", "talkDescription": "string", "linkedinProfile": "string"}
+            </remarks>
+            <param name="id">Identificador do evento</param>
+            <param name="input">Dados do palestrante</param>
+            <returns>Nada</returns>
+            <response code="204">Sucesso</response>
+            <response code="404">Não encontrado</response>
+        </member>
+        <member name="M:AwersomeDevEvents.API.Controllers.DevEventsController.GetAllSpeakers">
+            <summary>
+            Obter todos os speakers
+            </summary>
+            <returns>Coleção de speakers</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="T:AwersomeDevEvents.API.Persistence.Migrations.Migrations">
+            <inheritdoc />
+        </member>
+        <member name="M:AwersomeDevEvents.API.Persistence.Migrations.Migrations.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AwersomeDevEvents.API.Persistence.Migrations.Migrations.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AwersomeDevEvents.API.Persistence.Migrations.Migrations.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
